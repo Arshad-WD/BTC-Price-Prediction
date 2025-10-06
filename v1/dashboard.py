@@ -87,7 +87,7 @@ st.sidebar.markdown("## 🎛️ Configuration")
 st.sidebar.markdown("---")
 
 # API Configuration
-api_url = st.sidebar.text_input("🔗 API URL", value="http://127.0.0.1:8000", help="URL of your FastAPI server")
+api_url = st.sidebar.text_input("🔗 API URL", value="https://btc-price-prediction-981m.onrender.com", help="URL of your FastAPI server")
 
 # Data period selection
 data_period = st.sidebar.selectbox(
