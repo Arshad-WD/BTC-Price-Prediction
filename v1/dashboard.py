@@ -127,7 +127,7 @@ def fetch_bitcoin_data(period):
 def check_api_status(api_url):
     """Check if API is running"""
     try:
-        response = requests.get(f"{api_url}/health", timeout=5)
+        response = requests.get(f"{api_url}/health", timeout=15)
         if response.status_code == 200:
             return True, response.json()
         else:
@@ -138,7 +138,7 @@ def check_api_status(api_url):
 def get_current_price(api_url):
     """Get current Bitcoin price from API"""
     try:
-        response = requests.get(f"{api_url}/current-price", timeout=5)
+        response = requests.get(f"{api_url}/current-price", timeout=15)
         if response.status_code == 200:
             return response.json()["current_price"]
         else:
